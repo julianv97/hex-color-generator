@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
+import ColorList from "./components/ColorList";
+
+import ColorState from "./context/ColorState";
 
 function App() {
   return (
-    <div>
-      <h1>hola</h1>
-    </div>
+    <ColorState>
+      <ColorList />
+    </ColorState>
   );
 }
 
