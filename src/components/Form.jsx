@@ -5,15 +5,17 @@ const Form = () => {
   const { state, handleDispatch } = useContext(ColorContext);
   return (
     <form
-      className="inline-flex flex-col md:flex-row w-full md:items-center  items-center pl-4  py-5 "
+      className="inline-flex flex-col md:flex-row w-full md:items-center mb-6 h-full items-center  pl-4  py-5 "
       onSubmit={(e) => handleDispatch("FORM_SUBMIT", e)}
     >
-      <label className="capitalize pr-4 text-xl font-semibold">
-        hex color generator
-      </label>
+      <div className="h-full flex items-center ">
+        <label className="capitalize pr-4 text-xl font-semibold ">
+          hex color generator
+        </label>
+      </div>
 
-      <div className="flex pr-6 pb-4">
-        <div className="mt-1 relative rounded-md shadow-sm pr-2">
+      <div className="flex items-center pr-6">
+        <div className=" relative rounded-md shadow-sm pr-2">
           <input
             type="text"
             className={`${
@@ -24,23 +26,20 @@ const Form = () => {
             style={{ borderColor: state.color }}
           />
         </div>
-        <button
-          className="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-4 hover:border-blue-500 rounded capitalize"
-          style={{ background: state.color }}
-        >
+        <button className="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-4 hover:border-blue-500 rounded capitalize">
           search
         </button>
       </div>
       {state.error && (
         <div
-          className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 w-2/5 rounded relative"
+          className="bg-red-100 border h-full border-red-400 text-red-700 px-4 mt-5 md:mt-0 py-2 w-36 md:w-36 rounded relative"
           role="alert"
         >
           <strong className="font-bold">Try another! </strong>
 
-          <span class="absolute top-0 bottom-0 right-0 px-4 py-2">
+          <span class="absolute top-0 bottom-0 right-0  py-2">
             <svg
-              className="fill-current h-6 w-6 text-red-500"
+              className="fill-current h-6 w-6 pr-1 text-red-500"
               role="button"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
