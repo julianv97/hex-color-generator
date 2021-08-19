@@ -5,14 +5,14 @@ const Form = () => {
   const { state, handleDispatch } = useContext(ColorContext);
   return (
     <form
-      className="inline-flex w-full   items-center py-5"
+      className="inline-flex flex-col md:flex-row w-full md:items-center  items-center pl-4  py-5 "
       onSubmit={(e) => handleDispatch("FORM_SUBMIT", e)}
     >
       <label className="capitalize pr-4 text-xl font-semibold">
         hex color generator
       </label>
 
-      <div className="flex pr-6">
+      <div className="flex pr-6 pb-4">
         <div className="mt-1 relative rounded-md shadow-sm pr-2">
           <input
             type="text"
@@ -33,11 +33,11 @@ const Form = () => {
       </div>
       {state.error && (
         <div
-          className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 w-2/6 rounded relative"
+          className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 w-2/5 rounded relative"
           role="alert"
         >
-          <strong className="font-bold">There is no such color!</strong>
-          <span className="block sm:inline">Try another</span>
+          <strong className="font-bold">Try another! </strong>
+
           <span class="absolute top-0 bottom-0 right-0 px-4 py-2">
             <svg
               className="fill-current h-6 w-6 text-red-500"
