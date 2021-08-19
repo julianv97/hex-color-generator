@@ -3,12 +3,13 @@ import React, { useReducer } from "react";
 import ColorContext from "./ColorContext";
 import reducer from "./ColorReducer";
 
+import Values from "values.js";
+
 const ColorState = (props) => {
   const defaultState = {
-    color: "#f15025",
-    list: [],
+    color: "",
+    list: new Values("#f15025").all(10),
     error: false,
-    alert: false,
   };
 
   const [state, dispatch] = useReducer(reducer, defaultState);
