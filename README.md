@@ -2,7 +2,7 @@
 
 App para generar colores en hexadecimal.
 
-Desarrollado con React y TailwindCSS.
+Desarrollado con React + TailwindCSS.
 
 #### Link: https://hex-color-generator-julianv97.vercel.app/
 
