@@ -28,12 +28,12 @@ module.exports = {
       },
       gridAutoRows: {
         /* '2fr': 'minmax(96px, 1fr)', */
-        "3fr": "minmax(135.8px, 1fr)",
+        "3fr": "minmax(135.2px, 1fr)",
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [require("@tailwindcss/forms")],
 };

@@ -5,7 +5,7 @@ const Form = () => {
   const { state, handleDispatch } = useContext(ColorContext);
   return (
     <form
-      className="inline-flex flex-col md:flex-row w-full md:items-center mb-6 h-full items-center  pl-4  py-5 "
+      className="inline-flex flex-col md:flex-row w-full md:items-center mb-6 h-full items-center  pl-4  pt-5 "
       onSubmit={(e) => handleDispatch("FORM_SUBMIT", e)}
     >
       <div className="h-full flex items-center ">
