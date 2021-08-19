@@ -1,4 +1,4 @@
-# Tip Calculator
+# Hex Color Generator
 
 App para generar colores en hexadecimal.
 
